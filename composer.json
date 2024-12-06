@@ -1,0 +1,20 @@
+{
+  "name": "plan2net/redirect-export",
+  "type": "typo3-cms-extension",
+  "description": "TYPO3 CMS Extension to export redirects as CSV",
+  "license": ["GPL-2.0-or-later"],
+  "require": {
+    "typo3/cms-core": "^9.5",
+    "typo3/cms-redirects": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Plan2net\\RedirectExport\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "redirect_export"
+    }
+  }
+}

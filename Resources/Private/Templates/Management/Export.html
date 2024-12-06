@@ -1,0 +1,7 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:for each="{redirects}" as="redirect">
+<f:variable name="targetUri" value="{f:uri.typolink(parameter: redirect.target)}" />
+{redirect.source_host}|{redirect.source_path}|{targetUri}|{redirect.target_statuscode}|{f:if(condition: pageId, then: pageId, else: '')}|{redirect.disabled}|{f:format.date(date: redirect.starttime, format: 'd.m.Y H:i:s')}|{f:format.date(date: redirect.endtime, format: 'd.m.Y H:i:s')}|{redirect.hitcount}|{f:format.date(date: redirect.lasthiton, format: 'd.m.Y H:i:s')}|{redirect.is_regexp}
+</f:for>
+</html>
